@@ -1,54 +1,39 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('contactForm');
-  const successMsg = document.getElementById('success');
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const successMsg = document.getElementById("success");
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault(); 
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-    
-    document.querySelectorAll('.error').forEach(el => (el.textContent = ''));
-    successMsg.hidden = true;
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-    
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const subject = document.getElementById('subject').value.trim();
-    const message = document.getElementById('message').value.trim();
+    const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
-    let valid = true;
-
-    
-    if (!name) {
-      document.getElementById('error-name').textContent = 'Name is required';
-      valid = false;
+    if (!name || !email || !subject || !message) {
+      alert("Please fill in all fields.");
+      return;
     }
 
-    if (!email) {
-      document.getElementById('error-email').textContent = 'Email is required';
-      valid = false;
-    } else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-      document.getElementById('error-email').textContent = 'Invalid email format';
-      valid = false;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
     }
 
-    if (!subject) {
-      document.getElementById('error-subject').textContent = 'Subject is required';
-      valid = false;
+    if (message.length < 10) {
+      alert("Your message must be at least 10 characters long.");
+      return;
     }
 
-    if (!message || message.length < 10) {
-      document.getElementById('error-message').textContent = 'Message must be at least 10 characters';
-      valid = false;
-    }
+    successMsg.hidden = false;
+    form.reset();
 
-    if (valid) {
-      successMsg.hidden = false;
-      form.reset();
-
-      
-      setTimeout(() => {
-        successMsg.hidden = true;
-      }, 3000);
-    }
+    setTimeout(() => {
+      successMsg.hidden = true;
+    }, 3000);
   });
 });
+
+

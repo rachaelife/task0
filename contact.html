@@ -4,11 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Me — Frontend Wizards Stage 1</title>
-  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <script src="card.js"></script>
   <header class="navbar">
     <h1 class="logo">Stage 0</h1>
     <nav>
@@ -25,41 +23,30 @@
       drop a message below.
     </p>
 
-    <form id="contactForm" novalidate>
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input id="name" type="text" placeholder="Enter your full name" data-testid="test-contact-name" required />
-        <small class="error" id="test-contact-error-name"></small>
-      </div>
+    <form id="contactForm">
+      <label for="name">Full Name</label>
+      <input id="name" type="text" placeholder="Enter your full name" required />
 
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="you@example.com" data-testid="test-contact-email" required />
-        <small class="error" id="test-contact-error-email"></small>
-      </div>
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="you@example.com" required />
 
-      <div class="form-group">
-        <label for="subject">Subject</label>
-        <input id="subject" type="text" placeholder="Subject" data-testid="test-contact-subject" required />
-        <small class="error" id="test-contact-error-subject"></small>
-      </div>
+      <label for="subject">Subject</label>
+      <input id="subject" type="text" placeholder="Subject" required />
 
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" placeholder="Write your message here..." data-testid="test-contact-message" required></textarea>
-        <small class="error" id="test-contact-error-message"></small>
-      </div>
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
 
-      <button type="submit" class="submit-btn" data-testid="test-contact-submit">Send Message</button>
-      <p class="success" id="test-contact-success" hidden>✅ Your message was sent successfully!</p>
+      <button type="submit">Send Message</button>
+      <p id="success" class="success" hidden>✅ Message sent successfully!</p>
     </form>
   </main>
 
   <footer>© 2025 Frontend Wizards | Stage 1 Submission</footer>
 
-  <script src="script.js"></script>
+  <script src="card.js"></script>
 </body>
 </html>
+
 
 
 
