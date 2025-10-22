@@ -1,21 +1,54 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const timeEl = document.querySelector('[data-testid="test-user-time"]');
-  const avatarInput = document.querySelector('[data-testid="test-avatar-upload"]');
-  const avatarImg = document.querySelector('[data-testid="test-user-avatar"]');
+window.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  const successMsg = document.getElementById('success');
 
-  const updateTime = () => {
-    timeEl.textContent = Date.now();
-  };
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); 
 
-  updateTime();
-  setInterval(updateTime, 1000);
+    
+    document.querySelectorAll('.error').forEach(el => (el.textContent = ''));
+    successMsg.hidden = true;
 
-  avatarInput.addEventListener('change', e => {
-    const file = e.target.files[0];
-    if (file) {
-      const url = URL.createObjectURL(file);
-      avatarImg.src = url;
+    
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    let valid = true;
+
+    
+    if (!name) {
+      document.getElementById('error-name').textContent = 'Name is required';
+      valid = false;
+    }
+
+    if (!email) {
+      document.getElementById('error-email').textContent = 'Email is required';
+      valid = false;
+    } else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      document.getElementById('error-email').textContent = 'Invalid email format';
+      valid = false;
+    }
+
+    if (!subject) {
+      document.getElementById('error-subject').textContent = 'Subject is required';
+      valid = false;
+    }
+
+    if (!message || message.length < 10) {
+      document.getElementById('error-message').textContent = 'Message must be at least 10 characters';
+      valid = false;
+    }
+
+    if (valid) {
+      successMsg.hidden = false;
+      form.reset();
+
+      
+      setTimeout(() => {
+        successMsg.hidden = true;
+      }, 3000);
     }
   });
 });
-

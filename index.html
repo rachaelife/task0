@@ -1,54 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Profile Card — Frontend Stage 0</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
- <link rel="stylesheet" href="style.css">
- <script src="card.js" defer></script>
-
-</head>
-<body>
-  <article data-testid="test-profile-card">
-    <figure>
-      <img data-testid="test-user-avatar" src="assets/WhatsApp_Image_2025-10-18_at_14.31.41_3e6ff2a8-removebg-preview.png" alt="User Avatar" />
-    </figure>
-
-    <div class="details">
-      <h2 data-testid="test-user-name">Rachael ifeolouwa</h2>
-      <p data-testid="test-user-bio">Passionate Fullstack Developer creating innovative digital solutions. Skilled in Node.js, React, and crafting visually stunning user experiences.</p>
-
-      <nav data-testid="test-user-social-links">
-        <a href="https://x.com/OjoRachel3" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter"><i class="bi bi-twitter"></i></a>
-        <a href="https://github.com/rachaelife" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/rachael-ojo-b5446022b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin"><i class="bi bi-linkedin"></i></a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Profile — Frontend Wizards Stage 0</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <h1 class="logo">Stage 0</h1>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="contact.html">Contact</a>
       </nav>
+    </header>
 
-      <section>
-        <h3>Hobbies</h3>
-        <ul data-testid="test-user-hobbies">
-          <li>Coding</li>
-          <li>Cooking</li>
-          <li>Gaming and movie</li>
-          <li>Vacation</li>
-        </ul>
-      </section>
+    <article data-testid="test-profile-card">
+      <figure>
+        <img
+          data-testid="test-user-avatar"
+          src="assets/WhatsApp_Image_2025-10-18_at_14.31.41_3e6ff2a8-removebg-preview.png"
+          alt="User Avatar"
+        />
+      </figure>
 
-      <section>
-        <h3>Dislikes</h3>
-        <ul data-testid="test-user-dislikes">
-          <li>Bad UX</li>
-          <li>Slow networks</li>
-          <li>Unoptimized images</li>
-        </ul>
-      </section>
+      <div class="details">
+        <h2 data-testid="test-user-name">Hanafi Taofiq</h2>
+        <p data-testid="test-user-bio">
+          Passionate Fullstack Developer creating innovative digital solutions.
+          Skilled in Node.js, React, and crafting visually stunning user
+          experiences.
+        </p>
 
-      <div class="time" data-testid="test-user-time"></div>
-      <input type="file" accept="image/*" data-testid="test-avatar-upload" />
-    </div>
-  </article>
+        <nav data-testid="test-user-social-links" class="socials">
+          <a href="https://x.com/ultratech_IFE" target="_blank"
+            ><i class="bi bi-twitter-x"></i
+          ></a>
+          <a href="https://github.com/rachaelife" target="_blank"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/rachael-ojo-b5446022b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+        </nav>
 
- 
-</body>
+        <section>
+          <h3>Hobbies</h3>
+          <ul data-testid="test-user-hobbies">
+            <li>Coding</li>
+            <li>3D Design</li>
+            <li>Gaming</li>
+            <li>Photography</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Dislikes</h3>
+          <ul data-testid="test-user-dislikes">
+            <li>Bad UX</li>
+            <li>Slow networks</li>
+            <li>Unoptimized images</li>
+          </ul>
+        </section>
+
+        <div class="time" data-testid="test-user-time"></div>
+        <input type="file" accept="image/*" data-testid="test-avatar-upload" />
+      </div>
+    </article>
+
+    <script src="script.js"></script>
+  </body>
 </html>
