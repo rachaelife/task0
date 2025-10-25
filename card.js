@@ -1,11 +1,8 @@
-// ============================================
-// PROFILE CARD - Avatar Upload
-// ============================================
+
 document.addEventListener('DOMContentLoaded', () => {
   const avatarInput = document.querySelector('[data-testid="test-avatar-upload"]');
   const avatarImg = document.querySelector('[data-testid="test-user-avatar"]');
 
-  // Handle avatar upload
   if (avatarInput) {
     avatarInput.addEventListener('change', (e) => {
       const file = e.target.files[0];
@@ -18,9 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// ============================================
-// CONTACT FORM - Validation and Error Handling
-// ============================================
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -34,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Email validation pattern
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Clear error messages on input
+  
   const clearError = (fieldName) => {
     const errorEl = document.getElementById(`error-${fieldName}`);
     if (errorEl) {
@@ -43,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Show error message
+  
   const showError = (fieldName, message) => {
     const errorEl = document.getElementById(`error-${fieldName}`);
     if (errorEl) {
@@ -100,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Real-time validation on blur
+  
   if (nameInput) nameInput.addEventListener('blur', () => validateField('name', nameInput.value));
   if (emailInput) emailInput.addEventListener('blur', () => validateField('email', emailInput.value));
   if (subjectInput) subjectInput.addEventListener('blur', () => validateField('subject', subjectInput.value));
@@ -110,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Validate all fields
+    
     const isNameValid = validateField('name', nameInput.value);
     const isEmailValid = validateField('email', emailInput.value);
     const isSubjectValid = validateField('subject', subjectInput.value);
@@ -120,13 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Show success message
+    
     if (successMsg) {
       successMsg.style.display = 'block';
       successMsg.setAttribute('role', 'alert');
       form.reset();
 
-      // Hide success message after 4 seconds
+      
       setTimeout(() => {
         successMsg.style.display = 'none';
       }, 4000);
