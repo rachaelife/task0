@@ -12,68 +12,101 @@
   </head>
   <body>
     <header class="navbar">
-      <h1 class="logo">Stage 0</h1>
-      <nav>
+      <h1 class="logo">Frontend Wizards</h1>
+      <nav aria-label="Main navigation">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About Me</a>
         <a href="contact.html">Contact</a>
       </nav>
     </header>
 
-    <article data-testid="test-profile-card">
-      <figure>
-        <img
-          data-testid="test-user-avatar"
-          src="assets/WhatsApp_Image_2025-10-18_at_14.31.41_3e6ff2a8-removebg-preview.png"
-          alt="User Avatar"
-        />
-      </figure>
+    <main>
+      <article data-testid="test-profile-card" class="profile-card">
+        <header class="card-header">
+          <figure class="avatar-figure">
+            <img
+              data-testid="test-user-avatar"
+              src="assets/WhatsApp_Image_2025-10-18_at_14.31.41_3e6ff2a8-removebg-preview.png"
+              alt="Rachael ifeoluwa - Profile Avatar"
+            />
+          </figure>
+        </header>
 
-      <div class="details">
-        <h2 data-testid="test-user-name">Rachael ifeoluwa</h2>
-        <p data-testid="test-user-bio">
-          Passionate Fullstack Developer creating innovative digital solutions.
-          Skilled in Node.js, React, and crafting visually stunning user
-          experiences.
-        </p>
+        <div class="card-content">
+          <h2 data-testid="test-user-name">Rachael ifeoluwa</h2>
 
-        <nav data-testid="test-user-social-links" class="socials">
-          <a href="https://x.com/ultratech_IFE" target="_blank"
-            ><i class="bi bi-twitter-x"></i
-          ></a>
-          <a href="https://github.com/rachaelife" target="_blank"
-            ><i class="bi bi-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/rachael-ojo-b5446022b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            target="_blank"
-            ><i class="bi bi-linkedin"></i
-          ></a>
-        </nav>
+          <p data-testid="test-user-bio">
+            Passionate Fullstack Developer creating innovative digital solutions.
+            Skilled in Node.js, React, and crafting visually stunning user
+            experiences.
+          </p>
 
-        <section>
-          <h3>Hobbies</h3>
-          <ul data-testid="test-user-hobbies">
-            <li>Coding</li>
-            <li>3D Design</li>
-            <li>Gaming</li>
-            <li>Photography</li>
-          </ul>
-        </section>
+          <nav data-testid="test-user-social-links" class="socials" aria-label="Social media links">
+            <a
+              href="https://x.com/ultratech_IFE"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-twitter"
+              aria-label="Twitter"
+            >
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a
+              href="https://github.com/rachaelife"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-github"
+              aria-label="GitHub"
+            >
+              <i class="bi bi-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rachael-ojo-b5446022b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-linkedin"
+              aria-label="LinkedIn"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </nav>
 
-        <section>
-          <h3>Dislikes</h3>
-          <ul data-testid="test-user-dislikes">
-            <li>Bad UX</li>
-            <li>Slow networks</li>
-            <li>Unoptimized images</li>
-          </ul>
-        </section>
+          <section class="hobbies-section">
+            <h3>Hobbies</h3>
+            <ul data-testid="test-user-hobbies">
+              <li>Coding</li>
+              <li>3D Design</li>
+              <li>Gaming</li>
+              <li>Photography</li>
+            </ul>
+          </section>
 
-        <div class="time" data-testid="test-user-time"></div>
-        <input type="file" accept="image/*" data-testid="test-avatar-upload" />
-      </div>
-    </article>
+          <section class="dislikes-section">
+            <h3>Dislikes</h3>
+            <ul data-testid="test-user-dislikes">
+              <li>Bad UX</li>
+              <li>Slow networks</li>
+              <li>Unoptimized images</li>
+            </ul>
+          </section>
+
+          <div class="time-section">
+            <p><strong>Current Time (ms):</strong> <span data-testid="test-user-time">0</span></p>
+          </div>
+
+          <div class="avatar-upload-section">
+            <label for="avatar-upload">Upload New Avatar:</label>
+            <input
+              id="avatar-upload"
+              type="file"
+              accept="image/*"
+              data-testid="test-avatar-upload"
+              aria-label="Upload profile avatar image"
+            />
+          </div>
+        </div>
+      </article>
+    </main>
 
     <script src="card.js"></script>
   </body>

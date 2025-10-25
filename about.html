@@ -1,56 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About Me — Frontend Wizards Stage 0</title>
+  <title>About Me — Frontend Wizards Stage 1</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="navbar">
-    <h1 class="logo">Stage 0</h1>
-    <nav>
+    <h1 class="logo">Frontend Wizards</h1>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About Me</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <article data-testid="test-profile-card">
-    <figure>
-      <img
-        src="assets/WhatsApp_Image_2025-10-18_at_14.31.41_3e6ff2a8-removebg-preview.png"
-        alt="About Image" />
-    </figure>
+  <main data-testid="test-about-page" class="about-page">
+    <article class="about-article">
+      <header class="about-header">
+        <h1>About Me</h1>
+        <p class="intro-text">
+          I'm <strong>Rachael ifeoluwa</strong>, a passionate full-stack developer with a deep love for clean,
+          efficient, and creative code. My journey in tech is driven by a desire to build web experiences
+          that blend modern design with solid functionality.
+        </p>
+      </header>
 
-    <div class="details">
-      <h2>About Me</h2>
-      <p>
-        I'm <strong>Rachael ifeoluwa</strong>, a full-stack developer with a deep love for clean,
-        efficient, and creative code. My passion lies in building web experiences
-        that blend modern design with solid functionality.
-      </p>
-
-      <section>
-        <h3>What I Do</h3>
-        <ul>
-          <li>Frontend Development (React, Angular)</li>
-          <li>Backend APIs (Node.js, Express)</li>
-          <li>Database Management (MySQL, MongoDB)</li>
-          <!-- <li>UI/UX Design Prototyping</li> -->
-        </ul>
+      <!-- Bio Section -->
+      <section class="about-section">
+        <h2>My Journey</h2>
+        <p data-testid="test-about-bio">
+          I started my coding journey with a curiosity about how things work on the web. Over the years,
+          I've developed expertise in both frontend and backend technologies. I'm passionate about creating
+          user-centric solutions that solve real problems. Every project I work on is an opportunity to learn,
+          grow, and contribute to the tech community.
+        </p>
       </section>
 
-      <section>
-        <h3>Experience</h3>
-        <ul>
-          <li>Developed ERP Systems using Angular</li>
-          <li>Built Microfinance Admin Dashboards</li>
-          <li>Automated Business Processes with Node.js</li>
+      <!-- Goals Section -->
+      <section class="about-section">
+        <h2>Goals in This Program</h2>
+        <div data-testid="test-about-goals">
+          <p>
+            My primary goals for this Frontend Wizards program are:
+          </p>
+          <ul>
+            <li>Master semantic HTML and accessibility best practices</li>
+            <li>Build responsive, testable components with vanilla JavaScript</li>
+            <li>Develop a strong foundation in modern frontend patterns</li>
+            <li>Create production-ready code that follows industry standards</li>
+            <li>Collaborate with peers and learn from the community</li>
+            <li>Build a portfolio of high-quality projects</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Areas of Low Confidence Section -->
+      <section class="about-section">
+        <h2>Areas of Low Confidence</h2>
+        <div data-testid="test-about-confidence">
+          <p>
+            I believe in continuous improvement. Here are areas where I'm working to build more confidence:
+          </p>
+          <ul>
+            <li>Advanced CSS animations and transitions</li>
+            <li>Performance optimization and web vitals</li>
+            <li>Testing frameworks and test-driven development</li>
+            <li>Accessibility testing and WCAG compliance</li>
+            <li>Complex state management patterns</li>
+            <li>DevOps and deployment pipelines</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Note to Future Self Section -->
+      <section class="about-section">
+        <h2>Note to My Future Self</h2>
+        <div data-testid="test-about-future-note" class="future-note">
+          <blockquote>
+            <p>
+              "Remember why you started. Every challenge you face is an opportunity to grow.
+              Don't compare your beginning to someone else's middle. Focus on progress, not perfection.
+              The code you write today will teach you lessons for tomorrow. Keep learning, keep building,
+              and never stop being curious. You've got this! 🚀"
+            </p>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Extra Thoughts Section -->
+      <section class="about-section">
+        <h2>Extra Thoughts</h2>
+        <div data-testid="test-about-extra">
+          <p>
+            Beyond coding, I believe in the power of community and collaboration. The tech industry thrives
+            when we share knowledge, support each other, and celebrate wins together. I'm excited to be part
+            of the Frontend Wizards community and to contribute to a culture of learning and growth.
+          </p>
+          <p>
+            I'm also passionate about making technology accessible to everyone. Whether it's through writing
+            clean, semantic code or mentoring others, I want to help bridge the gap between complex technology
+            and user-friendly experiences.
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills Section (Bonus) -->
+      <section class="about-section">
+        <h2>Technical Skills</h2>
+        <ul class="skills-list">
+          <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, React, Angular</li>
+          <li><strong>Backend:</strong> Node.js, Express, Python</li>
+          <li><strong>Databases:</strong> MySQL, MongoDB, Firebase</li>
+          <li><strong>Tools:</strong> Git, VS Code, Figma, Webpack</li>
+          <li><strong>Practices:</strong> Semantic HTML, Accessibility, Responsive Design, Testing</li>
         </ul>
       </section>
-    </div>
-  </article>
+    </article>
+  </main>
+
+  <footer>© 2025 Frontend Wizards | Stage 1 Submission</footer>
+
+  <script src="card.js"></script>
 </body>
 </html>
 
